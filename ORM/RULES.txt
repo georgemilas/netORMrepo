@@ -1,0 +1,30 @@
+
+f = a field in the table
+
+if f.value is null:
+
+	if f.required and not f.hasDefaulConstraint and not f.isCalculated and f.defaultValue is null:
+		raise error
+	if f.required and you want to alow adding an empty value ("") then specify f.defaultValue=""
+	
+
+r = fields given RenderAttributes
+	-if fk_as is null and f.fk has elements (DBRelation's) then it will use fk_as = f.fk 
+	-if fk_as is an empty DBRelation it wil not render like if f.fk was empty
+		- for example if a field has a foreign key declared in DB but to render the list off all
+		  elements would rtake too long just set fk_as = new DBRelation() to force the engine to not 
+		  render as list of related element but to render normaly as a text field
+	
+	- use r.renderFields (name, label) for tyhe table to specify which fields to render and what label go give them
+		- alternativly use r["label"] = label on the field itself to specify field label
+		- if label is not specified will use f.name except "fld_" and except "_" which is replace by a space (" ")
+	
+	- use r.skipRenderFields on the table to only specify the fields not to render
+		- use f.renderAttributes to specify labels
+	
+	- any other attributes in r will be used on the HTML tag as tag attributes
+		- ex: use r['onClick'] = "alert('bla bla');" to add a javascript onClick event to the element 
+		  be it the <form> tag in case of the table renderAttributes or <input> tag in case of field renderAttributes
+
+
+		  

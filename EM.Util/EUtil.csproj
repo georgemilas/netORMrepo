@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08860B92-BACA-48F4-B6E2-426ABC6807F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EM.Util</RootNamespace>
+    <AssemblyName>EUtil</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\Rule Sets\SurePayroll_AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Development|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production|AnyCPU' ">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASP\HTMLForm.cs" />
+    <Compile Include="ASP\user\LoginCookie.cs" />
+    <Compile Include="ASP\user\UserPermissions.cs" />
+    <Compile Include="assembly\AssemblyLoader.cs" />
+    <Compile Include="assembly\IPlugin.cs" />
+    <Compile Include="assembly\IPluginHost.cs" />
+    <Compile Include="assembly\ServiceLoaderConfig\ConfigServiceLoaderFactory.cs" />
+    <Compile Include="assembly\ServiceLoaderConfig\ServiceLoaderElement.cs" />
+    <Compile Include="assembly\ServiceLoaderConfig\ServiceLoaderCollection.cs" />
+    <Compile Include="assembly\ServiceLoaderConfig\ServiceLoaderSection.cs" />
+    <Compile Include="assembly\PluginLoader.cs" />
+    <Compile Include="assembly\ServiceLoaderConfig\ServiceSettingsElement.cs" />
+    <Compile Include="batch\BatchProvider.cs" />
+    <Compile Include="batch\TimeBatchProvider.cs" />
+    <Compile Include="batch\VolumeBachProvider.cs" />
+    <Compile Include="cache\CacheValue.cs" />
+    <Compile Include="cache\AppFabricCache.cs" />
+    <Compile Include="cache\DepCache.cs" />
+    <Compile Include="cache\DictCache.cs" />
+    <Compile Include="cache\WebCache.cs" />
+    <Compile Include="collections\CSV.cs" />
+    <Compile Include="collections\EnumManager.cs" />
+    <Compile Include="collections\StringExtensions.cs" />
+    <Compile Include="collections\StringUtil.cs" />
+    <Compile Include="collections\EDictionary.cs" />
+    <Compile Include="collections\EList.cs" />
+    <Compile Include="collections\ESet.cs" />
+    <Compile Include="collections\OrderedDictionary.cs" />
+    <Compile Include="collections\ThreadQueue\ActionQueueThread.cs" />
+    <Compile Include="collections\ThreadQueue\BoundAsyncRunner.cs" />
+    <Compile Include="collections\ThreadQueue\ActionAsyncQueueThread.cs" />
+    <Compile Include="collections\ThreadQueue\NonBlockingActionQueueThread.cs" />
+    <Compile Include="collections\ThreadQueue\ProducerConsumerBlockingQueue.cs" />
+    <Compile Include="collections\TreeNode\FileSystem\FolderTree.cs" />
+    <Compile Include="collections\TreeNode\TreeNode.cs" />
+    <Compile Include="collections\TreeNode\TreeWalker.cs" />
+    <Compile Include="config\ConfigManager.cs" />
+    <Compile Include="DbC\Constraint.cs" />
+    <Compile Include="DbC\DbC.cs" />
+    <Compile Include="DbC\TestConstraint.cs" />
+    <Compile Include="DbC\TestDbC.cs" />
+    <Compile Include="assembly\Dependencies.cs" />
+    <Compile Include="Encription.cs" />
+    <Compile Include="collections\EnumerableExtensions.cs" />
+    <Compile Include="FlatWsdl.cs" />
+    <Compile Include="HttpPostWrapper.cs" />
+    <Compile Include="logging\BaseLogger.cs" />
+    <Compile Include="logging\config\ConfigLoggerFactory.cs" />
+    <Compile Include="logging\config\LoggerElement.cs" />
+    <Compile Include="logging\config\LoggersCollection.cs" />
+    <Compile Include="logging\config\LoggerSection.cs" />
+    <Compile Include="logging\config\TypedLoggerElement.cs" />
+    <Compile Include="logging\ConsoleLogger.cs" />
+    <Compile Include="logging\LoggerAsync.cs" />
+    <Compile Include="logging\WindowsEventLogLogger.cs" />
+    <Compile Include="logging\LogMessage.cs" />
+    <Compile Include="logging\LogTemplates.cs" />
+    <Compile Include="logging\MessageWriter.cs" />
+    <Compile Include="logging\RichTextBoxMessageWriter.cs" />
+    <Compile Include="logging\RollingFileLogger.cs" />
+    <Compile Include="logging\EmailLogger.cs" />
+    <Compile Include="logging\FileLogger.cs" />
+    <Compile Include="logging\Logger.cs" />
+    <Compile Include="logging\LogLevel.cs" />
+    <Compile Include="logging\MdbLogger.cs" />
+    <Compile Include="logging\DatabaseLogger.cs" />
+    <Compile Include="logging\LevelLogger.cs" />
+    <Compile Include="logging\WebPageLogger.cs" />
+    <Compile Include="Mailer.cs" />
+    <Compile Include="NetUtil.cs" />
+    <Compile Include="parser\BaseParser.cs" />
+    <Compile Include="parser\exception\EvaluationException.cs" />
+    <Compile Include="parser\IEvaluableExpression.cs" />
+    <Compile Include="parser\IOperator.cs" />
+    <Compile Include="parser\ObjectQuery\IObjectQuerySemantic.cs" />
+    <Compile Include="parser\keywords\IKeywordsSemantic.cs" />
+    <Compile Include="parser\keywords\KeywordsSemantic.cs" />
+    <Compile Include="parser\keywords\SQL\SqlTokenEvaluator.cs" />
+    <Compile Include="parser\keywords\SQL\SqlAND.cs" />
+    <Compile Include="parser\keywords\SQL\SqlNOT.cs" />
+    <Compile Include="parser\keywords\SQL\SqlOR.cs" />
+    <Compile Include="parser\keywords\SQL\SQLSemantic.cs" />
+    <Compile Include="parser\keywords\TextSearch\SearchAND.cs" />
+    <Compile Include="parser\keywords\TextSearch\SearchNOT.cs" />
+    <Compile Include="parser\keywords\TextSearch\SearchOR.cs" />
+    <Compile Include="parser\keywords\TextSearch\TextSearchSemantic.cs" />
+    <Compile Include="parser\ObjectQuery\LiteralToken.cs" />
+    <Compile Include="parser\ObjectQuery\ObjectComparerOperator.cs" />
+    <Compile Include="parser\ObjectQuery\ObjectEvaluatorSemantic.cs" />
+    <Compile Include="parser\ObjectQuery\ObjectQueryExpressionParser.cs" />
+    <Compile Include="parser\ObjectQuery\ObjectQuerySemantic.cs" />
+    <Compile Include="parser\ObjectQuery\ObjectQueryTester.cs" />
+    <Compile Include="parser\ObjectQuery\OperatorExpression.cs" />
+    <Compile Include="parser\ObjectQuery\PropertyToken.cs" />
+    <Compile Include="parser\Token.cs" />
+    <Compile Include="parser\keywords\KeywordsExpressionParser.cs" />
+    <Compile Include="parser\keywords\KeywordsTester.cs" />
+    <Compile Include="parser\ExpressionTree.cs" />
+    <Compile Include="parser\exception\ParsingException.cs" />
+    <Compile Include="parser\keywords\SQL\SQLOperators.cs" />
+    <Compile Include="parser\TokensContainer.cs" />
+    <Compile Include="TickerService\GenericTickCollectionService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TickerService\GenericTickService.cs" />
+    <Compile Include="TickerService\IProcessingStrategy.cs" />
+    <Compile Include="TickerService\ITickService.cs" />
+    <Compile Include="TickerService\ServiceLogger.cs" />
+    <Compile Include="TickerService\ServiceStartSettings.cs" />
+    <Compile Include="TickerService\TickerConfig.cs" />
+    <Compile Include="TickerService\TickerStartManager.cs" />
+    <Compile Include="TickerService\TimeIntervalProcessingStrategy.cs" />
+    <Compile Include="TickerService\TimeOfDayProcessingStrategy.cs" />
+    <Compile Include="WCF\ServiceBaseStarter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShellProcess.cs" />
+    <Compile Include="config\SimpleConfigParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeTracker.cs" />
+    <Compile Include="WCF\WCFClientFacade.cs" />
+    <Compile Include="WCF\WCFServiceStarter.cs" />
+    <Compile Include="WCF\WCFStartManager.cs" />
+    <Compile Include="WCF\ServiceStartSettings.cs" />
+    <Compile Include="XMLBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="parser\keywords\Usage.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EM.Interfaces\EMInterfaces.csproj">
+      <Project>{97D32A69-F4BC-40C3-8419-086138209033}</Project>
+      <Name>EMInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ecfg.syn" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

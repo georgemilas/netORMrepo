@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUtil", "EUtil.csproj", "{08860B92-BACA-48F4-B6E2-426ABC6807F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Development|Any CPU.Build.0 = Development|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Production|Any CPU.Build.0 = Production|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{08860B92-BACA-48F4-B6E2-426ABC6807F9}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ORM.DBFields.FBoolean">
+    <Position X="11.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FBoolean.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FByteArray">
+    <Position X="14.25" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FByteArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FChar">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FChar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FDatetime">
+    <Position X="4.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FDatetime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FFloat">
+    <Position X="5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FFloat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FGuid">
+    <Position X="2.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FGuid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FImage">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FInteger">
+    <Position X="7.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FInteger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FNumber">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FText">
+    <Position X="9.5" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FVarBinary">
+    <Position X="15.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FVarBinary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FVarchar">
+    <Position X="1.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FVarchar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.FXML">
+    <Position X="0.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\FXML.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBFields.GenericField">
+    <Position X="9.5" Y="0.5" Width="2.25" />
+    <NestedTypes>
+      <Delegate Name="ORM.DBFields.GenericField.ValidatorFunc" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\DBFields\GenericField.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ORM.DBFields.GenericField.ValueSet" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\DBFields\GenericField.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABEAAIgEAABQAQBgAAABAgAEAAAGICBAQAAEAAAAAAA=</HashCode>
+      <FileName>Database\DBFields\GenericField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<deployment rootFolder="C:\Test\DeployTest">
+
+
+  <!-- ****************************** SQL ********************************************* -->
+
+  <deploy deployType="SQL" folder="DatabaseScriptsDeployment\SQL" disable="false">
+    [sql_source_folder]= {rootFolder}\{folder}
+    [sql_exceptions]=
+    [sql_server_name]= SQL-DEV
+    #[sql_server_user]=
+    [sql_use_win_auth]= true
+    [sql_walk_strategy]= breadth
+    [sql_rollback_folder]=
+  </deploy>
+
+  <deploy deployType="SQL" folder="DatabaseScriptsDeployment\PayrollDB" disable="false">
+    [sql_source_folder]= {rootFolder}\{folder}
+    [sql_exceptions]=
+    [sql_server_name]= PayrollDB-Dev
+    #[sql_server_user]=
+    [sql_use_win_auth]= true
+    [sql_walk_strategy]= breadth
+    [sql_rollback_folder]=
+  </deploy>
+
+  <deploy deployType="SQL" folder="DatabaseScriptsDeployment\SPFinance" disable="false">
+    [sql_source_folder]= {rootFolder}\{folder}
+    [sql_exceptions]=
+    [sql_server_name]= financedb-dev
+    #[sql_server_user]=
+    [sql_use_win_auth]= true
+    [sql_walk_strategy]= breadth
+    [sql_rollback_folder]=
+  </deploy>
+
+  <!-- ****************************** COM ********************************************* -->
+
+  <deploy deployType="COM" folder="COM" disable="false">
+    [com_source_folder]= {rootFolder}\{folder}
+    [com_destination_folder]= c:\Objects
+    [com_exceptions]=
+    [com_run_parallel]= true
+    [com_servers]= tsnode1-dev, \\tsnode1-dev\c$\Objects, C:\Objects
+                  web-dev, \\web-dev\edrive\Objects, e:\Objects
+                  ops-dev, \\ops-dev\edrive\Objects, e:\Objects
+                  tsnode2-dev, \\tsnode2-dev\c$\Objects, C:\Objects
+                  xsvc-dev, \\xsvc-dev\c$\Objects, c:\Objects
+                  payrollcalc1-dev, \\payrollcalc1-dev\c$\Objects, c:\Objects
+                  payrollcalc2-dev, \\payrollcalc2-dev\c$\Objects, c:\Objects
+  </deploy>
+
+
+  <!-- ****************************** FILES COPY ********************************************* -->
+  
+  <deploy deployType="PROD_FILE_DEPLOY" folder="WEB" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_team_out]= false
+    [prod_copy]= true
+    [prod_restart]= false
+    [prod_team_in]= false
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_restart_params]= -r -f \\computername -t 10 -c "deployment restart" -d up:4:2
+    [prod_team_out_seconds]= 45
+    [prod_restart_minutes]= 3
+    [prod_team_in_minutes]= 5
+    [prod_team_file]=
+    [prod_run_parallel]= true
+    [prod_root]= \e$\IIS
+    [prod_servers]= web-dev, \\web-dev\e$\IIS
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="WEB2" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_team_out]= false
+    [prod_copy]= true
+    [prod_restart]= false
+    [prod_team_in]= false
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_restart_params]= -r -f \\computername -t 10 -c "deployment restart" -d up:4:2
+    [prod_team_out_seconds]= 45
+    [prod_restart_minutes]= 3
+    [prod_team_in_minutes]= 5
+    [prod_team_file]=
+    [prod_run_parallel]= true
+    [prod_root]= \e$\IIS2
+    [prod_servers]= web-dev, \\web-dev\e$\IIS2
+  </deploy>  
+  
+  <deploy deployType="PROD_FILE_DEPLOY" folder="OPS" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_team_out]= false
+    [prod_copy]= true
+    [prod_restart]= false
+    [prod_team_in]= false
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_restart_params]= -r -f \\computername -t 10 -c "deployment restart" -d up:4:2
+    [prod_team_out_seconds]= 45
+    [prod_restart_minutes]= 3
+    [prod_team_in_minutes]= 5
+    [prod_team_file]=
+    [prod_run_parallel]= true
+    [prod_root]= \e$\IIS
+    [prod_servers]= ops-dev, \\ops-dev\e$\IIS
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="SPAPPS" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_team_out]= false
+    [prod_copy]= true
+    [prod_restart]= false
+    [prod_team_in]= false
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_run_parallel]= true
+    [prod_servers]= SPAPPS1-DEV, \\SPAPPS1-DEV\C$\IIS
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="XSVC" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_team_out]= false
+    [prod_copy]= true
+    [prod_restart]= false
+    [prod_team_in]= false
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_restart_params]= -r -f \\computername -t 10 -c "deployment restart" -d up:4:2
+    [prod_team_out_seconds]= 45
+    [prod_restart_minutes]= 3
+    [prod_team_in_minutes]= 5
+    [prod_team_file]=
+    [prod_run_parallel]= true
+    [prod_root]= \e$\IIS
+    [prod_servers]= xsvc-dev, \\xsvc-dev\d$\IIS
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="WS" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_team_out]= false
+    [prod_copy]= true
+    [prod_restart]= false
+    [prod_team_in]= false
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_restart_params]= -r -f \\computername -t 10 -c "deployment restart" -d up:4:2
+    [prod_team_out_seconds]= 45
+    [prod_restart_minutes]= 3
+    [prod_team_in_minutes]= 5
+    [prod_team_file]=
+    [prod_run_parallel]= true
+    [prod_root]= \e$\IIS
+    [prod_servers]= ws1-dev, \\ws1-dev\C$\IIS
+    ws2-dev, \\ws2-dev\C$\IIS
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="CHK-PRINT" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_copy]= true
+    [prod_copy_method]= copy
+    [prod_run_parallel]= true
+    [prod_reset_iis]= false
+    [prod_servers]= chkprint-dev, \\chkprint-dev\c$\Program Files\SPCheckDelivery
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="PayrollApp" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_team_out]= false
+    [prod_copy]= true
+    [prod_restart]= false
+    [prod_team_in]= false
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_restart_params]= -r -f \\computername -t 10 -c "deployment restart" -d up:4:2
+    [prod_team_out_seconds]= 45
+    [prod_restart_minutes]= 3
+    [prod_team_in_minutes]= 5
+    [prod_team_file]=
+    [prod_run_parallel]= true
+    [prod_root]= \e$\IIS
+    [prod_servers]= payrollapp1-dev, \\payrollapp1-dev\e$\IIS
+                    payrollapp2-dev, \\payrollapp2-dev\e$\IIS                    
+
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="SVC\Apps\mailengine" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_copy]= true
+    [prod_copy_method]= copy
+    [prod_run_parallel]= true
+    [prod_reset_iis]= false
+    [prod_servers]= svc-dev, \\svc-dev\sdrive\APPS\mailengine
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="TS\APPS" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_copy]= true
+    [prod_copy_method]= copy
+    [prod_run_parallel]= true
+    [prod_reset_iis]= false
+    [prod_servers]= tsnode1-dev, \\tsnode1-dev\c$\Apps
+                    tsnode2-dev, \\tsnode2-dev\c$\Apps
+  </deploy>
+
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="AppFabric" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_copy]= true
+    [prod_copy_method]= copy
+    [prod_reset_iis]= true
+    [prod_run_parallel]= true
+    [prod_servers]= appfab1-dev, \\appfab1-dev\c$\Apps\IIS
+  </deploy>
+
+  <deploy deployType="PROD_FILE_DEPLOY" folder="Finance" disable="false">
+    [prod_source_folder]= {rootFolder}\{folder}
+    [prod_copy]= true
+    [prod_copy_method]= copy
+    [prod_run_parallel]= true
+    [prod_reset_iis]= false
+    [prod_servers]= spfinapp-dev, \\spfinapp-dev\c$\Program Files\SurePayroll\
+
+  </deploy>
+
+  <!-- ****************************** SERVICE ********************************************* -->
+  
+  <deploy deployType="SERVICE" folder="SurePayrollWCFPayrollEngine" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SurePayrollWCFPayrollEngineService
+    [service_copy_exclude]= bak
+    [service_run_parallel]= true
+    [service_servers]= PayrollCalc1-dev, \\PayrollCalc1-dev\c$\Program Files\surepayroll\SurePayrollWCFPayrollEngineService
+                      PayrollCalc2-dev, \\PayrollCalc2-dev\c$\Program Files\surepayroll\SurePayrollWCFPayrollEngineService
+                      PayrollServ1-dev, \\PayrollServ1-dev\c$\Program Files\surepayroll\SurePayrollWCFPayrollEngineService
+                      PayrollServ2-dev, \\PayrollServ2-dev\c$\Program Files\surepayroll\SurePayrollWCFPayrollEngineService
+  </deploy>
+
+  <deploy deployType="SERVICE" folder="SPTicker" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SurePayrollTickerServices
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= Ticker-DEV, \\ticker-dev\c$\Program Files\SurePayroll\SPTickerServices
+  </deploy>
+
+  <deploy deployType="SERVICE" folder="OPS-FS\SPFileServerManagerService.Buffered" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= BufferingService
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= ops-fs-dev, \\ops-fs-dev\c$\Apps\SPFileServerManagerService.Buffered
+  </deploy>
+
+  <deploy deployType="SERVICE" folder="SVC\Program Files\SurePayroll\SurePayroll SalesForce Integration" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SurePayrollSalesForceIntegration
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= svc-dev, \\svc-dev\c$\Program Files\SurePayroll\SurePayroll SalesForce Integration
+  </deploy>
+  
+  <deploy deployType="SERVICE" folder="SVC\APPS\SPMailBuilderService" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SPMailBuilderService
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= svc-dev, \\svc-dev\S$\Apps\SPMailBuilderService
+  </deploy>
+
+  <deploy deployType="SERVICE" folder="SVC\APPS\SPMailSenderService" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SPMailSenderService
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= svc-dev, \\svc-dev\S$\Apps\SPMailSenderService
+  </deploy>
+
+  <deploy deployType="SERVICE" folder="SVC\APPS\SPTaxSyncService" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SPTaxSyncService
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= svc-dev, \\svc-dev\S$\Apps\SPTaxSyncService
+  </deploy>
+
+  <deploy deployType="SERVICE" folder="PayrollOfficeServiceHost" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= Payroll Office Service Host
+    [service_copy_exclude]= bak
+    [service_run_parallel]= true
+    [service_servers]= PayrollCalc1-dev, \\PayrollCalc1-dev\c$\Program Files\America OnShore\Payroll Office Service Host
+                      PayrollCalc2-dev, \\PayrollCalc2-dev\c$\Program Files\America OnShore\Payroll Office Service Host
+                      PayrollServ1-dev, \\PayrollServ1-dev\c$\Program Files\America OnShore\Payroll Office Service Host
+                      PayrollServ2-dev, \\PayrollServ2-dev\c$\Program Files\America OnShore\Payroll Office Service Host
+  </deploy>
+
+  <deploy deployType="SERVICE" folder="SVC\APPS\SkinManagementService" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SkinManagementService
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= svc-dev, \\svc-dev\S$\Apps\SkinManagementService
+  </deploy>
+
+
+  <deploy deployType="SERVICE" folder="SVC\APPS\PaychexTickers" disable="false">
+    [service_source_folder]= {rootFolder}\{folder}
+    [service_stop]= true
+    [service_copy]= true
+    [service_start]= true
+    [service_name]= SPPaychexTickers
+    [service_copy_exclude]=
+    [service_run_parallel]= true
+    [service_servers]= svc-dev, \\svc-dev\S$\Apps\PaychexTickers
+  </deploy>
+  
+</deployment>

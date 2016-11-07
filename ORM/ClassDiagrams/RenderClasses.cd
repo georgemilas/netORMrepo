@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ORM.render.RenderControls.FieldRenderControl">
+    <Position X="5.75" Y="0.5" Width="2.25" />
+    <NestedTypes>
+      <Delegate Name="ORM.render.RenderControls.FieldRenderControl.ValueFormatter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>render\RenderControls\FieldRenderControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAiEAAAAAAAAAAAAECAAABAAAAAAIAAYIUIAUAAQAQA=</HashCode>
+      <FileName>render\RenderControls\FieldRenderControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderBool">
+    <Position X="3.25" Y="6.75" Width="1.5" />
+    <InheritanceLine Type="ORM.render.RenderControls.RenderGeneric" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.062" Y="2.423" />
+        <Point X="5.062" Y="2.755" />
+        <Point X="5.125" Y="2.755" />
+        <Point X="5.125" Y="7.46" />
+        <Point X="4.75" Y="7.46" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderBool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderCalendarDateTime">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgIAAAAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderCalendarDateTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderDateTime">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <InheritanceLine Type="ORM.render.RenderControls.RenderGeneric" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.062" Y="2.423" />
+        <Point X="5.062" Y="2.748" />
+        <Point X="5.125" Y="2.748" />
+        <Point X="5.125" Y="3.71" />
+        <Point X="4.75" Y="3.71" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderDateTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderFK">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <InheritanceLine Type="ORM.render.RenderControls.RenderGeneric" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.062" Y="2.423" />
+        <Point X="5.062" Y="2.741" />
+        <Point X="5.125" Y="2.741" />
+        <Point X="5.125" Y="6.625" />
+        <Point X="5.75" Y="6.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAIAAIAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderFK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderGeneric">
+    <Position X="3" Y="0.5" Width="2.25" />
+    <InheritanceLine Type="ORM.render.RenderControls.FieldRenderControl" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="1.264" />
+        <Point X="5.25" Y="1.264" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAQIAQAAAAQA=</HashCode>
+      <FileName>render\RenderControls\RenderGeneric.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderList">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="ORM.render.RenderControls.RenderGeneric" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.062" Y="2.423" />
+        <Point X="5.062" Y="2.755" />
+        <Point X="5.125" Y="2.755" />
+        <Point X="5.125" Y="8.188" />
+        <Point X="5.75" Y="8.188" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAACAIAAIAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderNumber">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <InheritanceLine Type="ORM.render.RenderControls.RenderGeneric" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.062" Y="2.423" />
+        <Point X="5.062" Y="2.768" />
+        <Point X="5.125" Y="2.768" />
+        <Point X="5.125" Y="5.71" />
+        <Point X="4.75" Y="5.71" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAQAAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderPhone">
+    <Position X="1.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderPhone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderControls.RenderText">
+    <Position X="3.25" Y="8.75" Width="1.5" />
+    <InheritanceLine Type="ORM.render.RenderControls.RenderGeneric" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.062" Y="2.423" />
+        <Point X="5.062" Y="2.727" />
+        <Point X="5.125" Y="2.727" />
+        <Point X="5.125" Y="9.378" />
+        <Point X="4.75" Y="9.378" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>render\RenderControls\RenderText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.HTMLFormTableRenderer">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>render\HTMLFormTableRenderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.render.HTMLViewTableRenderer">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>render\HTMLViewTableRenderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.render.RenderingProvider" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACAAAAAAAAgjAGAAAAAAQAAAAIAAAAAAAQAAQAAA=</HashCode>
+      <FileName>render\RenderingProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.render.HTMLListRenderer">
+    <Position X="19" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACAAAAgIAAAAiBAAAAAAAgQAAAMAAAAAAAAACAQAAA=</HashCode>
+      <FileName>render\HTMLListRenderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.render.HTMLListRendererLongDate">
+    <Position X="19" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>render\HTMLListRendererLongDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.RenderAttributes">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAEAgABAAAAAAQAAAJAAAAAAAAAAQA=</HashCode>
+      <FileName>render\RenderAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.WebPage.FormResult">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAUABAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPage\ORMFormPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.ListAction">
+    <Position X="20.75" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ORM.render.ListAction.Position" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>render\ListAction.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAIAAEAAAIAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>render\ListAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.render.ListPagingData">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAEAAAAABAAA=</HashCode>
+      <FileName>render\ListPagingData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.WebPage.ListResult">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAUABAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPage\ORMFormPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.WebPage.ORMFormPage" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="ORM.WebPage.ORMFormPage.setCustomData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WebPage\ORMFormPage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ORM.WebPage.ORMFormPage.saveTasks" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WebPage\ORMFormPage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ORM.WebPage.ORMFormPage.navigationLinksParameters" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WebPage\ORMFormPage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ORM.WebPage.ORMFormPage.FormRendererGetter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WebPage\ORMFormPage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ORM.WebPage.ORMFormPage.ListRendererGetter&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WebPage\ORMFormPage.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAACRAIAYCA4UAABEAAAEARDAAAAhAAASIAAQAIAAAA=</HashCode>
+      <FileName>WebPage\ORMFormPage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ORM.render.IFormRenderer">
+    <Position X="9" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>render\IFormRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ORM.render.IRenderingProvider">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAADAAAAAAAAQAAAAAAAAAAAAQAAQAAA=</HashCode>
+      <FileName>render\IRenderingProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ORM.render.IListRenderer">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAIAAAAABAAAAAAAAQAAAEAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>render\IListRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

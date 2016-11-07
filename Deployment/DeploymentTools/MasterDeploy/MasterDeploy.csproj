@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD75A6CD-3244-4824-BCC1-0F7CBF899E1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterDeploy</RootNamespace>
+    <AssemblyName>MasterDeployPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COMDeployAction.cs" />
+    <Compile Include="MissingDeployFinder.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="WinServiceDeployAction.cs" />
+    <Compile Include="ProdFilesDeployAction.cs" />
+    <Compile Include="DeployAction.cs" />
+    <Compile Include="DeploymentXMLConfiguration.cs" />
+    <Compile Include="MasterDeployControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterDeployControl.Designer.cs">
+      <DependentUpon>MasterDeployControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLDeployAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\EM.DB\EDB.csproj">
+      <Project>{C565080C-8D58-4724-8C59-D4AA2CC46384}</Project>
+      <Name>EDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\EM.Interfaces\EMInterfaces.csproj">
+      <Project>{97D32A69-F4BC-40C3-8419-086138209033}</Project>
+      <Name>EMInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\EM.Util\EUtil.csproj">
+      <Project>{08860B92-BACA-48F4-B6E2-426ABC6807F9}</Project>
+      <Name>EUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tools\MasterBuild\Common.SurePayroll\Common.SurePayroll.csproj">
+      <Project>{63D00187-6E65-48E5-A5EA-AC94CE2F73EC}</Project>
+      <Name>Common.SurePayroll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TreeSync\TreeSync.csproj">
+      <Project>{2E660C1D-666F-4DA9-8810-036105F7468D}</Project>
+      <Name>TreeSync</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\COMRegistrationPlugin\COMRegistrationPlugin.csproj">
+      <Project>{7CBE554C-0B4C-4EBE-BFCF-596A6BA856F5}</Project>
+      <Name>COMRegistrationPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeploymentTools\DeploymentTools.csproj">
+      <Project>{82CD8049-8ECC-431E-AB38-70ADA0EE6FD8}</Project>
+      <Name>DeploymentTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTPluginBase\DTPluginBase.csproj">
+      <Project>{858841F2-8208-4D66-862E-E8C64CFD5DAF}</Project>
+      <Name>DTPluginBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParallelTasks\ParallelTasks.fsproj">
+      <Project>{DDB5DF3E-1DF6-427B-B844-425D315A5B1C}</Project>
+      <Name>ParallelTasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectDeployPackage\ProjectDeployPackagePlugin.csproj">
+      <Project>{1C78309F-F899-4E5D-AAF3-F1729AFCA514}</Project>
+      <Name>ProjectDeployPackagePlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceDeployPlugin\ServiceDeployPlugin.csproj">
+      <Project>{0D5EE116-12A7-47CE-A637-18BB1A9AFC7F}</Project>
+      <Name>ServiceDeployPlugin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDeployControl.resx">
+      <DependentUpon>MasterDeployControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DEV_Deployment.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OtherConfig\Prod_Deployment_BackEnd_1.xml" />
+    <Content Include="OtherConfig\Prod_Deployment_BackEnd_2.xml" />
+    <Content Include="OtherConfig\Prod_Deployment_DMZ_1.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="OtherConfig\Prod_Deployment_DMZ_2.xml" />
+    <Content Include="OtherConfig\Staging_Deployment_BackEnd.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OtherConfig\Staging_Deployment_DMZ.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test_Deployment.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

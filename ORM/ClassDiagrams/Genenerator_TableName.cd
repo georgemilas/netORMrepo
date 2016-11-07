@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ORM.db_store.ColumnAttributes">
+    <Position X="3.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CACAAAgAAAAAIQAkAAAAAAAAIAAAEBAAQAAAAAAAAAA=</HashCode>
+      <FileName>Database\db_store\TableInfo\ColumnAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.db_store.TableName">
+    <Position X="0.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAACQIAAAAAQBAREgAFAAAAABAAgBIKAABACABCAQAA=</HashCode>
+      <FileName>Database\db_store\TableInfo\TableName.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.generator.GenTable">
+    <Position X="3.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAIA=</HashCode>
+      <FileName>generator\GenTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.generator.GeneratorBase">
+    <Position X="7.75" Y="0.5" Width="3" />
+    <NestedTypes>
+      <Enum Name="ORM.generator.GeneratorBase.PartialType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>generator\GeneratorBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="ORM.generator.GeneratorBase.FilePathBuilder" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>generator\GeneratorBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ORM.generator.GeneratorBase.DatabaseObjectSkipRule" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>generator\GeneratorBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAUKhBgKABBSkAESAIBFWEgocECULACoDgGwCkEHBAs=</HashCode>
+      <FileName>generator\GeneratorBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.generator.GeneratorDynamicSQL">
+    <Position X="4.75" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEEAAAAEAAAAAABAAAAAAAAAE=</HashCode>
+      <FileName>generator\GeneratorDynamicSQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.generator.GeneratorStoredProcBased">
+    <Position X="4.75" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAEEAAAAECAAAAABAABAAAAAAE=</HashCode>
+      <FileName>generator\stored procs\GeneratorStoredProcBased.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.generator.SQLServerStoredProcsGenerator">
+    <Position X="1.5" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAIAAAEAAAAAAAAACIAEAAAIAAAEABAAFAABAIA=</HashCode>
+      <FileName>generator\stored procs\SQLServerStoredProcsGenerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.generator.GeneratorSQLServerStoredProcBased">
+    <Position X="4.75" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAA=</HashCode>
+      <FileName>generator\stored procs\GeneratorSQLServerStoredProcBased.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="spg" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="ORM.generator.IStoredProcsGenerator" Collapsed="true">
+    <Position X="1.5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAAIAAAEAAAAAAAAAAAAAAAAIAAAAABAAAAABAIA=</HashCode>
+      <FileName>generator\stored procs\IStoredProcsGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

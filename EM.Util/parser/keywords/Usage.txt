@@ -1,0 +1,52 @@
+There is an implementation of a keyword based query language in sourcesafe under Invoice\EUtil
+and in the EUtil.parser.keywords namespace 
+You may find it useful in implementing searches.
+
+It works somewhat like a where clause in an SQL query.
+For example: 
+-	 gheorghe maria             ->  works like expected of a search on the web, search for either gheorghe or maria
+					 				   (well actually Google and such is smarter than just that)  
+-	gheorghe or maria        	-> same as above, the or keyword is equivalent with space
+-	gheorghe and maria    ==     
+		gheorghe & maria      	-> search for documents that contain both gheorghe and maria
+-	"gheorghe milas" 			-> search the text as is (escape " with \", not need to escape \ itself)
+-	gheorghe and not maria
+-	gheorghe and not (maria andrew) -> use parentheses for better flexibility
+-	gheorghe {\d.\d}		-> it can do a regular expression match (in this case a number like 1.0)  (it’s a regular expression if is in between {} )
+
+
+ex:
+1) Evaluate a query against a text:
+KeywordsExpressionParser parser = new KeywordsExpressionParser("maria and not gheorghe");
+
+bool result = (bool)parser.evaluate("gheorghe and maria work for necc") 
+//  result is false  because it contains the word gheorghe  (what do you know, the truth is not always what it looks like)
+
+
+2) It can be used to translate the evaluation into an SQL query where clause:
+
+//can take more then one database field as a list
+SQLTokenEvaluator te = new SQLTokenEvaluator("fld_name",
+     SQLTokenEvaluator.OPERATOR_TYPE.LIKE,
+     SQLTokenEvaluator.FIELD_TYPE.STRING);               
+
+KeywordsExpressionParser parser = new KeywordsExpressionParser("(maria gheorghe) and not (andrew anthony)", new SQLSemantic(te));		
+
+string where = (string)parser.evaluate(null);
+
+=> where will be like below: 
+		( (fld_name LIKE '%maria%' OR fld_name LIKE '%gheorghe%') 
+		  AND NOT (fld_name LIKE '%andrew%' OR fld_name LIKE '%anthony%')
+		)
+     actually there are more parentheses in the result but is equivalent to above
+	
+	
+Note:    AND has greater precedence then OR  so I wrote  (maria gheorghe) and not (andrew anthony), 
+		 If I did:
+		 maria gheorghe and not (andrew anthony)  would be equivalent with    maria or (gheorghe and not (andrew or anthony))		 
+
+		 
+
+
+
+	     	

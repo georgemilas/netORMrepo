@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ORM.QueryStatementTableRow">
+    <Position X="10" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAGAEAAAIAgAAAAAAAAAAAAAAAAAAARAAAQBAAAgAAA=</HashCode>
+      <FileName>Database\Reflection_TableRow\QueryStatementTableRow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.StoredProcTableRow">
+    <Position X="10" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAARAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Reflection_TableRow\StoredProcTableRow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.TableRow">
+    <Position X="4.25" Y="0.5" Width="3" />
+    <NestedTypes>
+      <Delegate Name="ORM.TableRow.ValidatorFunc" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\TableRow.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Class Name="ORM.TableRow.FieldsValueChanged" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\TableRow.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAGCQYAAAAgxRAAAwMAABAQAAABAAEaQKAIAACAAgAg=</HashCode>
+      <FileName>Database\TableRow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.TableRowDynamicSQL">
+    <Position X="0.5" Y="8.5" Width="2.5" />
+    <InheritanceLine Type="ORM.TableRowPersist" FixedFromPoint="true">
+      <Path>
+        <Point X="1.875" Y="6.495" />
+        <Point X="1.875" Y="8.125" />
+        <Point X="1.75" Y="8.125" />
+        <Point X="1.75" Y="8.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAEAIIQAAABAAAAAAAAoAQAIAAAAAABAAAQAAAAEAAA=</HashCode>
+      <FileName>Database\TableRowDynamicSQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.TableRowPersist">
+    <Position X="0.5" Y="3.75" Width="2.75" />
+    <InheritanceLine Type="ORM.TableRow" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="5.125" />
+        <Point X="3.25" Y="5.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAAADAAAAAAAAgAQQAAAAAACAAAAQAAAAEAAA=</HashCode>
+      <FileName>Database\TableRowPersist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.TableRowStoredProcBased">
+    <Position X="3.25" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAJAQAAABAAAAAAAAgAQAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Database\TableRowStoredProcBased.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.TablePersist&lt;T&gt;">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAoQAAAACQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Database\TablePersist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.SQLStatement">
+    <Position X="0.5" Y="11.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QACAgAIJAACQABAAAAQBAQAAAAGAAABAAAAAAABAAAQ=</HashCode>
+      <FileName>Database\SQLStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.Table&lt;T&gt;">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoQAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Database\Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBConstraint">
+    <Position X="12.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Database\DBConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.DBRelation" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="10.75" Width="1.75" />
+    <NestedTypes>
+      <Delegate Name="ORM.DBRelation.AdditionalSQLAttributesBuilder" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\DBRelation.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAARAAAAQkAAAAAAoCIEAAAABAAAAAQAAIAAA=</HashCode>
+      <FileName>Database\DBRelation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ORM.FKInfo">
+    <Position X="7.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\FKInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_collection" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ORM.PKInfo">
+    <Position X="12.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\PKInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.RelationsCollection">
+    <Position X="10" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEIEAEAAAAAAAFBQCEAABQQAAIAAAAAECAAAAABQIAA=</HashCode>
+      <FileName>Database\RelationsCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORM.OneToManyInfo">
+    <Position X="12.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\OneToManyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORM.Validators">
+    <Position X="7.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAEAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\Validators.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ORM.ITableRow">
+    <Position X="7.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAGCAYAAAAAAAAAAgIAAAAQAAABAAACQAAAAACAAgAg=</HashCode>
+      <FileName>Database\ITableRow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

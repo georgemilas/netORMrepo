@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D28BB134-E0CD-4A64-B133-2CD4B4CAC4D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ORM</RootNamespace>
+    <AssemblyName>ORM</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Development|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production|AnyCPU' ">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\DBConstraint.cs" />
+    <Compile Include="Database\DBFields\FTimeSpan.cs" />
+    <Compile Include="Database\DBFields\FVarBinary.cs" />
+    <Compile Include="Database\DBFields\FImage.cs" />
+    <Compile Include="Database\db_store\StoredProcDataSetDef.cs" />
+    <Compile Include="Database\Index\DataViewIndex.cs" />
+    <Compile Include="Database\Index\DictIndex.cs" />
+    <Compile Include="Database\Index\DictIndexMultiField.cs" />
+    <Compile Include="Database\Index\DictIndexMultiFieldUnique.cs" />
+    <Compile Include="Database\Index\DictIndexUnique.cs" />
+    <Compile Include="Database\Index\PKIndex.cs" />
+    <Compile Include="Database\ITable.cs" />
+    <Compile Include="Database\ITableRow.cs" />
+    <Compile Include="Database\RelationsCollection.cs" />
+    <Compile Include="Database\OneToManyInfo.cs" />
+    <Compile Include="Database\TablePersist.cs" />
+    <Compile Include="Database\TableRowPersist.cs" />
+    <Compile Include="Database\TableRowStoredProcBased.cs" />
+    <Compile Include="Database\TableRowDynamicSQL.cs" />
+    <Compile Include="Database\db_store\TableInfo\ColumnAttributes.cs" />
+    <Compile Include="Database\db_store\TableInfo\DataTableColumnsWrap.cs" />
+    <Compile Include="Database\db_store\TableInfo\TableRowColumnsWrap.cs" />
+    <Compile Include="Database\db_store\TableInfo\ITableColumnsWrap.cs" />
+    <Compile Include="Database\db_store\TableInfo\TableColumnsInfoColumnsWrap.cs" />
+    <Compile Include="Database\DBFields\FText.cs" />
+    <Compile Include="Database\TableRowStoredProcedures.cs" />
+    <Compile Include="exceptions\TableValidationExceptions.cs" />
+    <Compile Include="generator\DataSetSP.cs" />
+    <Compile Include="generator\GenTable.cs" />
+    <Compile Include="generator\stored procs\CRUDBasedStoredProcs.cs" />
+    <Compile Include="generator\stored procs\GeneratorSQLServerStoredProcBased.cs" />
+    <Compile Include="generator\stored procs\GeneratorStoredProcBased.cs" />
+    <Compile Include="generator\GeneratorDynamicSQL.cs" />
+    <Compile Include="generator\GeneratorBase.cs" />
+    <Compile Include="generator\stored procs\IStoredProcsGenerator.cs" />
+    <Compile Include="generator\stored procs\SQLServerStoredProcsGenerator.cs" />
+    <Compile Include="IORMContext.cs" />
+    <Compile Include="ORMContextNoDB.cs" />
+    <Compile Include="Database\DBRelation.cs" />
+    <Compile Include="Database\FKInfo.cs" />
+    <Compile Include="Database\PKInfo.cs" />
+    <Compile Include="Database\SQLStatement.cs" />
+    <Compile Include="Database\db_store\persist\SqlServer2005Database.cs" />
+    <Compile Include="Database\db_store\StoredProcParam.cs" />
+    <Compile Include="Database\db_store\StoredProcDef.cs" />
+    <Compile Include="Database\db_store\TableInfo\TableColumnsInfo.cs" />
+    <Compile Include="Database\db_store\TableInfo\TableName.cs" />
+    <Compile Include="Database\DBFields\FByteArray.cs" />
+    <Compile Include="Database\DBFields\FGuid.cs" />
+    <Compile Include="Database\DBFields\FBoolean.cs" />
+    <Compile Include="Database\DBFields\FChar.cs" />
+    <Compile Include="Database\DBFields\FDatetime.cs" />
+    <Compile Include="Database\DBFields\FFloat.cs" />
+    <Compile Include="Database\DBFields\FInteger.cs" />
+    <Compile Include="Database\DBFields\FNumber.cs" />
+    <Compile Include="Database\DBFields\FVarchar.cs" />
+    <Compile Include="Database\DBFields\FXML.cs" />
+    <Compile Include="exceptions\BusinessLogicError.cs" />
+    <Compile Include="exceptions\ORMException.cs" />
+    <Compile Include="exceptions\ValidationException.cs" />
+    <Compile Include="BasicClassFactory.cs" />
+    <Compile Include="Database\db_store\TableInfo\TableColumnsWrap.cs" />
+    <Compile Include="ORMClassFactory.cs" />
+    <Compile Include="generator\Generator.cs" />
+    <Compile Include="Database\Table.cs" />
+    <Compile Include="IClassFactory.cs" />
+    <Compile Include="ORMContext.cs" />
+    <Compile Include="Database\Reflection_TableRow\QueryStatementTableRow.cs" />
+    <Compile Include="render\IRenderingProvider.cs" />
+    <Compile Include="render\RenderControls\RenderGeneric.cs" />
+    <Compile Include="render\RenderControls\RenderList.cs" />
+    <Compile Include="render\RenderControls\RenderPhone.cs" />
+    <Compile Include="render\RenderControls\FieldRenderControl.cs" />
+    <Compile Include="render\HTMLListRendererLongDate.cs" />
+    <Compile Include="render\HTMLListRenderer.cs" />
+    <Compile Include="render\HTMLViewTableRenderer.cs" />
+    <Compile Include="render\IFormRenderer.cs" />
+    <Compile Include="render\IListRenderer.cs" />
+    <Compile Include="render\ListAction.cs" />
+    <Compile Include="render\ListPagingData.cs" />
+    <Compile Include="render\RenderControls\RenderBool.cs" />
+    <Compile Include="render\RenderControls\RenderCalendarDateTime.cs" />
+    <Compile Include="render\RenderControls\RenderDateTime.cs" />
+    <Compile Include="render\RenderControls\RenderFK.cs" />
+    <Compile Include="render\RenderControls\RenderNumber.cs" />
+    <Compile Include="render\RenderControls\RenderText.cs" />
+    <Compile Include="Database\db_store\persist\GenericDatabase.cs" />
+    <Compile Include="Database\DBFields\GenericField.cs" />
+    <Compile Include="Database\TableRow.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="render\HTMLFormTableRenderer.cs" />
+    <Compile Include="render\RenderAttributes.cs" />
+    <Compile Include="Database\db_store\persist\SQLServerDatabase.cs" />
+    <Compile Include="exceptions\SQLSintaxException.cs" />
+    <Compile Include="render\RenderingProvider.cs" />
+    <Compile Include="Database\Reflection_TableRow\StoredProcTableRow.cs" />
+    <Compile Include="util\CSVBulkImporter.cs" />
+    <Compile Include="util\DataTableBulkImporter.cs" />
+    <Compile Include="util\GenericTableBulkImporter.cs" />
+    <Compile Include="util\ValueParser.cs" />
+    <Compile Include="Database\Validators.cs" />
+    <Compile Include="WebPage\ORMFormPage.cs" />
+    <Compile Include="WebPage\ORMPageContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RULES.txt" />
+    <Content Include="render\test.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EM.DB\EDB.csproj">
+      <Project>{C565080C-8D58-4724-8C59-D4AA2CC46384}</Project>
+      <Name>EDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EM.Interfaces\EMInterfaces.csproj">
+      <Project>{97D32A69-F4BC-40C3-8419-086138209033}</Project>
+      <Name>EMInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EM.Util\EUtil.csproj">
+      <Project>{08860B92-BACA-48F4-B6E2-426ABC6807F9}</Project>
+      <Name>EUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagrams\Genenerator_TableName.cd" />
+    <None Include="ClassDiagrams\ORMContextAndFactory.cd" />
+    <None Include="ClassDiagrams\ORM_Design.vsd" />
+    <None Include="ClassDiagrams\TableRow.cd" />
+    <None Include="ClassDiagrams\DBFields.cd" />
+    <None Include="ClassDiagrams\RenderClasses.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

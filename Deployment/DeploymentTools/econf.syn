@@ -1,0 +1,94 @@
+; TextPad syntax definitions for econf (for example *.cfg) files
+; Copyright (C) 1998-2000, Helios Software Solutions
+
+C=1
+
+[Syntax]
+Namespace1 = 6
+IgnoreCase = Yes
+KeyWordLength =
+BracketChars = []
+OperatorChars = @=
+PreprocStart = 
+SyntaxStart = 
+SyntaxEnd =
+HexPrefix = 0x
+CommentStart = 
+CommentEnd = 
+CommentStartAlt =
+CommentEndAlt =
+SingleComment = #
+SingleCommentCol =
+SingleCommentAlt =
+SingleCommentColAlt =
+SingleCommentEsc =
+StringsSpanLines = No
+StringStart = 
+StringEnd = 
+StringAlt = 
+StringEsc = 
+CharStart = 
+CharEnd = 
+CharEsc = 
+
+[Keywords 1]
+com_source_folder
+com_destination_folder
+com_exceptions
+com_servers
+rolling_log_file_delete
+
+[Keywords 2]
+sql_source_folder
+sql_exceptions
+sql_server_name
+sql_server_user
+sql_use_win_auth
+sql_walk_strategy
+sql_rollback_folder
+
+[Keywords 3]
+prod_source_folder
+prod_team_file
+prod_team_out_seconds
+prod_restart_minutes
+prod_team_in_minutes
+prod_restart_params
+prod_copy_method
+prod_root
+prod_root2
+prod_servers
+prod_team_out
+prod_copy
+prod_restart
+prod_team_in
+
+[Keywords 4]
+sync_source_folder
+sync_destination_folder
+sync_exceptions
+sync_method
+sync_multi_source
+
+[Keywords 5]
+prjpkg_script
+prjpkg_schema_folder
+prjpkg_data_folder
+prjpkg_destination_folder
+prjpkg_crud_folder
+prjpkg_release_scripts_folder
+prjpkg_release_script_name
+prjpkg_database_scope_separator
+
+[Keywords 6]
+service_source_folder
+service_stop
+service_copy
+service_start
+service_name
+service_servers				
+service_copy_exclude
+
+
+[Preprocessor keywords]
+
