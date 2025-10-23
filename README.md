@@ -6,8 +6,8 @@ This is a custom ORM framework I built in C# and .NET and used in various capaci
 
 It contains features like:
 * a scaffolding system to auto-generate and render a basic CRUD app
-* fully introspect a database to generate .NET classes, including tables, views, constraints etc.
-* supports SQL Server, Oracle, and any ODBC-compliant database  
+* fully introspect a database to generate .NET classes, including tables, views, constraints, etc.
+* supports SQL Server, Oracle, and any ODBC or OLEDB-compliant database provider 
 * code generation to create stored procedure artifacts to be included in source control
 * a REST API layer for accessing the data
 * security with JWT and OAuth
